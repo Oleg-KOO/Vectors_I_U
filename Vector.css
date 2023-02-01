@@ -1,0 +1,45 @@
+body {
+
+    display: flex;
+    //align-items: center;
+    //justify-content: center;
+    overflow: auto;
+    margin: 50px;
+	padding: 0;
+	user-select: none;
+}
+
+h1{
+	font-size: 100%;
+	color: black;
+	text-align: center;
+	margin: 15px;
+	text-shadow: 2px 2px 5px DimGrey;
+	user-select: none;
+}
+	
+.box {
+	width: 80%;
+	display: block;
+	border-radius: 10px;
+	background-color: white;
+	box-shadow: 0 0 25px 10px black;
+	padding: 5px 10px 10px 10px;
+}
+
+.svgBox{
+	box-shadow: 0 0 15px 2px black;
+	user-select: none;
+	padding: 5px;
+	display: flex;
+	margin-bottom: 10px;
+}
+
+.svgBox:last-child{
+	margin-bottom: 0px;
+}
+
+		
+
+	
+
