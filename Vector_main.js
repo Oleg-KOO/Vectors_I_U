@@ -44,7 +44,7 @@ let angels =
 let rubric = new Rubric([fieldData[2], fieldData[3]], angels[0], 15, vectorTextFormat);
 
 let mainBox = document.getElementsByClassName('box')[0];
-mainBox.addEventListener('pointermove', new ResizeBox(mainBox), true, true, false);
+mainBox.addEventListener('pointermove', new ResizeBox(mainBox));
 svgBox1.addEventListener('pointermove', new ResizeBox(svgBox1));
-svgBox2.addEventListener('pointermove', new ResizeBox(svgBox2), true, true, false);
+svgBox2.addEventListener('pointermove', new ResizeBox(svgBox2));
 
