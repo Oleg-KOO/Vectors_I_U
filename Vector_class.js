@@ -95,10 +95,6 @@ class Point{
 			'tag': 'g', 
 			'id': "point"
 			});
-		//this.point = this.box.AddSVG({
-		//	'tag': 'circle', 
-		//	'r': 3, 
-		//	'fill': 'black'});
 		this.marker = this.box.AddSVG({
 			'tag': 'circle', 
 			'r': 25, 
@@ -143,8 +139,6 @@ class Point{
 		this.x = x; this.y = y;
 		let x1 = this.fieldData.Scale.X(x); let y1 = this.fieldData.Scale.Y(y);
 		this.x1 = x1; this.y1 = y1;
-		//this.point.setAttribute('cx', x1);
-		//this.point.setAttribute('cy', y1);
 		this.marker.setAttribute('cx', x1);
 		this.marker.setAttribute('cy', y1);
 		this.text.innerHTML = this.textFunc(x, y);
@@ -289,7 +283,6 @@ class Harmonic{
 		
 		this.SetPath();
 		vector.htmlItem.addEventListener('moveVector', this.SetPath.bind(this));
-		
 	}
 	
 	SetPath(){
@@ -326,13 +319,11 @@ class HarmonicAngel{
 			'marker-start': markerStart,
 			'marker-end': markerEnd,
 		});
-		
 		this.text = field.AddSVG({
 			'tag': 'text',
 			'text-anchor': 'middle',
 		});
 		this.text.SetAttr(textFormat);
-		
 		this.harmonicOne.vector.htmlItem.addEventListener('moveVector', this.SetAngel.bind(this));
 		this.harmonicTwo.vector.htmlItem.addEventListener('moveVector', this.SetAngel.bind(this));
 		this.SetAngel();
@@ -483,7 +474,7 @@ class Rubric{
 			if (arg[0](angel) && this.currentMarking != arg[1]){
 				arg[2].forEach((x) => {patch += this.elements[x]});
 				arg[2].forEach((x) => {marking += x != 'W' ? x + this.w : ''});
-				this.currentMarking == arg[1];
+				this.currentMarking = arg[1];
 				return [true, patch + this.endPath, marking, this[arg[1]]];
 			}
 		};
